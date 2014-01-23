@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Interactive Design - Spring 2014
 ---
 
 <html>
@@ -128,8 +128,6 @@ ul.anchors {
 <div class="page">
 
 <h1>Interactive News Design</h1>
-{{ site.time | date_to_xmlschema }}
-
 
 <p>In this course, students will learn how to design and build news Web sites from the ground up. The course will be a mix of concept and practical application of digital news design, including user research. Students will learn to develop prototypes, iterate design concepts and code the HTML, CSS and JavaScript to implement their vision for the Web and mobile devices. Class meets from 9 a.m. to Noon on Tuesdays and Thursdays.</p>
 
@@ -141,7 +139,7 @@ ul.anchors {
 
 <div class="hr"></div>
 
-<a name="schedule"></a><h2>Schedule</h2>
+<a name="schedule"></a><h2>Class Overview</h2>
 
 
 {% for post in site.posts reversed %}
@@ -155,7 +153,7 @@ ul.anchors {
 
 	<a class="course-link" href="{{ post.url }}">
 		<div class="meeting">
-			<div class="date">{{ post.date | date: "%-d %B %Y" }}</div>
+			<div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
 			<div class="description">
 				<h3>{{ post.title }}</h3>
 				<p>{{ post.summary }}</p>
