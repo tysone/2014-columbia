@@ -31,7 +31,7 @@ title: Interactive Design - Spring 2014
 		<h5>Week {{ this_week }}</h5>
   {% endif %}
 
-	<a class="course-link" href="{{ post.url }}">
+	<a class="course-link" href="{{ site.baseurl }}{{ post.url }}">
 		<div class="meeting">
 			<div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
 			<div class="description">
