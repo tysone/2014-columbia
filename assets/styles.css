@@ -102,3 +102,8 @@ text-decoration:underline
 a.course-link p {
 color:#444
 }
+
+.post li {
+  font-size: 18px;
+  margin: 8px 0;
+}
