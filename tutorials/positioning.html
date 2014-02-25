@@ -1,0 +1,239 @@
+<html>
+
+<head>
+	<title>CSS Positioning</title>
+	<style>
+
+		body {
+			width: 100%;
+			height: 100%;
+			max-width: 700px;
+			margin: 30px auto;
+			padding: 0;
+			border: 0;
+			font-size: 23px;
+			font-family: 'nyt-franklin', arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 100px;
+		}
+
+		.push-down {
+			clear: both;
+		}
+
+		.float-container {
+			margin-bottom: 100px;
+		}
+
+		.inset,
+		.rectangle {
+			position: static;
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			font-size: 25px;
+		}
+
+			.long.rectangle {
+				width: 200px;
+				top: 50px;
+				left: 50px;
+			}
+
+		.inset {
+			float: left;
+		}
+
+		.static {
+			position: static;
+		}
+
+		.relative {
+			position: relative;
+			top: 100px;
+			left: 100px;
+		}
+
+		.absolute {
+			position: absolute;
+			top: 120px;
+			left: 200px;
+		}
+
+		.fixed {
+			position: fixed;
+			top: 0;
+		}
+
+		.holding-box {
+			padding: 10px;
+			background-color: #dbdbdb;
+			height: 300px;
+			min-width: 700px;
+		}
+
+		.annotation,
+		.annotation-inline {
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			background-color: #f7f7f7;
+			border: 2px solid #000;
+			margin: 20px 0;
+			color: #333;
+		}
+
+		.annotation-inline {
+			display: inline;
+		}
+
+		.annotation {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.container {
+			text-align: center;
+		}
+
+		.bigger {
+			font-size: 40px;
+		}
+
+		.left_column,
+		.right_column {
+			float: left;
+		}
+
+	</style>
+</head>
+
+<body>
+
+
+	<h1>Inline vs. block</h1>
+
+	<div class="container">
+		<div class="annotation"><span class="bigger">Block-level</span> element</div>
+		<div class="annotation">Block-level element</div>
+		<div class="annotation">Block-level element</div>
+	</div>
+
+	<br /><br />
+
+	<div class="container">
+		<span class="annotation-inline">Inline element</span>
+		<span class="annotation-inline">Inline element</span>
+		<span class="annotation-inline">Inline element</span>
+	</div>
+
+	<h1>Floats</h1>
+
+	<div class="float-container">
+
+		<div class="left_column">
+			<div class="inset">Floated content</div>
+		</div>
+
+		<div class="right_column">
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat. Pellentesque venenatis auctor nisi quis aliquam. Cras porta tempus consectetur. Etiam ut elementum velit, id porttitor lacus. Praesent hendrerit aliquet erat vel tempor. Nam nisl dui, scelerisque et tristique sed, laoreet ac massa. Vivamus erat libero, semper eget pellentesque ac, vulputate dictum elit. Ut adipiscing, mauris malesuada tempus ornare, ipsum diam tempor enim, eu imperdiet risus urna sed nulla. Phasellus condimentum gravida elit nec luctus. In venenatis lectus tortor, non iaculis metus faucibus in.
+
+		</div>
+
+	</div>
+
+	<div class="float-container">
+
+		<div class="inset">Floated content</div>
+		<div class="inset">Floated content</div>
+		<div class="inset">Floated content</div>
+
+	</div>
+
+	<div class="float-container">
+		This content should be cleared, but it isn't. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat.
+	</div>
+
+	<div class="float-container">
+
+		<div class="inset">Floated content</div>
+		<div class="inset">Floated content</div>
+		<div class="inset">Floated content</div>
+
+	</div>
+
+	<div class="float-container push-down">
+		Better. This content is cleared because it has a class with clear: both. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat.
+	</div>
+
+	<h1>Positioning</h1>
+
+	<div class="float-container">
+
+		<div class="static rectangle">Position: static</div>
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat. Pellentesque venenatis auctor nisi quis aliquam. Cras porta tempus consectetur. Etiam ut elementum velit, id porttitor lacus. Praesent hendrerit aliquet erat vel tempor. Nam nisl dui, scelerisque et tristique sed, laoreet ac massa. Vivamus erat libero, semper eget pellentesque ac, vulputate dictum elit. Ut adipiscing, mauris malesuada tempus ornare, ipsum diam tempor enim, eu imperdiet risus urna sed nulla. Phasellus condimentum gravida elit nec luctus. In venenatis lectus tortor, non iaculis metus faucibus in.
+
+	</div>
+
+	<div class="float-container">
+
+		<div class="relative rectangle">Position: relative</div>
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat. Pellentesque venenatis auctor nisi quis aliquam. Cras porta tempus consectetur. Etiam ut elementum velit, id porttitor lacus. Praesent hendrerit aliquet erat vel tempor. Nam nisl dui, scelerisque et tristique sed, laoreet ac massa. Vivamus erat libero, semper eget pellentesque ac, vulputate dictum elit. Ut adipiscing, mauris malesuada tempus ornare, ipsum diam tempor enim, eu imperdiet risus urna sed nulla. Phasellus condimentum gravida elit nec luctus. In venenatis lectus tortor, non iaculis metus faucibus in.
+
+	</div>
+
+	<div class="float-container relative">
+
+		<div class="absolute rectangle">Position: absolute</div>
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat. Pellentesque venenatis auctor nisi quis aliquam. Cras porta tempus consectetur. Etiam ut elementum velit, id porttitor lacus. Praesent hendrerit aliquet erat vel tempor. Nam nisl dui, scelerisque et tristique sed, laoreet ac massa. Vivamus erat libero, semper eget pellentesque ac, vulputate dictum elit. Ut adipiscing, mauris malesuada tempus ornare, ipsum diam tempor enim, eu imperdiet risus urna sed nulla. Phasellus condimentum gravida elit nec luctus. In venenatis lectus tortor, non iaculis metus faucibus in.
+
+	</div>
+
+	<h1>Position: absolute is tricky</h1>
+
+	<div class="float-container">
+
+
+		<div class="relative holding-box">
+			<div class="absolute long rectangle">Position: absolute</div>
+			Container is <strong>position: relative</strong>
+		</div>
+
+		<br /><br />
+
+		<div class="absolute holding-box">
+			<div class="absolute long rectangle">Position: absolute</div>
+			Container is <strong>position: absolute</strong>
+		</div>
+
+		<br /><br />
+
+<!-- 		<div class="static holding-box" style="margin-top: 300px;">
+			<div class="absolute long rectangle">Position: absolute</div>
+			Container is <strong>position: static</strong> (the default position)
+		</div> -->
+
+	</div>
+
+<!-- 	<div class="float-container">
+
+		<div class="fixed rectangle">Position: fixed</div>
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lorem diam. Aliquam erat volutpat. Pellentesque venenatis auctor nisi quis aliquam. Cras porta tempus consectetur. Etiam ut elementum velit, id porttitor lacus. Praesent hendrerit aliquet erat vel tempor. Nam nisl dui, scelerisque et tristique sed, laoreet ac massa. Vivamus erat libero, semper eget pellentesque ac, vulputate dictum elit. Ut adipiscing, mauris malesuada tempus ornare, ipsum diam tempor enim, eu imperdiet risus urna sed nulla. Phasellus condimentum gravida elit nec luctus. In venenatis lectus tortor, non iaculis metus faucibus in.
+
+	</div> -->
+
+</body>
+
+</html>
